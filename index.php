@@ -9,6 +9,14 @@
     <head>
 
         <title>Langory</title>
+        <style>
+            .sub-wrapper-one form{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                width: 400px;
+            }
+        </style>
 
     </head>
 
@@ -18,18 +26,18 @@
 
             <div class="sub-wrapper-one">
 
-                <div class="new">
-
-                    <div class="new-word">
-
-                        <input type="text" name='new-word'>
-
-                    </div>
-
                     <div class="new-traslation">
 
-                        <input type="text" name='new-traslation'>
-                        <input type="submit" name='new-submit'>
+                        <form action="" method="post">  
+                            
+                            <input type="text" name='new-word'>
+                            <input type="text" name='new-traslation'>
+                            <input type="submit" name='new-submit'>
+                        
+                            <?php echo $_POST["new-traslation"]; ?>
+                            <?php echo $_POST["new-word"]; ?>
+
+                        </form>  
 
                     </div>
 
